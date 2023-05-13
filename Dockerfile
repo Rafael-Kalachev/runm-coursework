@@ -10,5 +10,5 @@ RUN pip3 install -r requirements.txt
 
 # Copy all files in the current dir to the main dir of the container
 #COPY . .
-CMD [ "python3", "-W ignore" ,"training.py" ]
+CMD [ "/bin/sh", "/usr/src/app/docker_process.sh" ]
 
