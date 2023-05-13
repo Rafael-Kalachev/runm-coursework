@@ -1,0 +1,9 @@
+# requirements.txt
+joblib==1.1.0
+neptune
+numpy==1.21.4
+scikit-learn==1.0.1
+openpyxl
+matplotlib
+seaborn
+imblearn
