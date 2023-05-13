@@ -11,6 +11,7 @@ sns.set()
 import warnings
 warnings.filterwarnings('ignore')
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
@@ -25,6 +26,8 @@ from sklearn.metrics import accuracy_score
 from pandas import DataFrame
 import config as _conf
 import int_util as _util
+
+import pickle
 
 
 def cleanup_dataset(df_orig):
@@ -167,9 +170,25 @@ def main():
     # Make predictions on the testing data
     y_pred = clf.predict(X_test)
 
+    model_name="svm_model.pkl"
+    model_file_path = os.path.join(_conf.out_dir, model_name)
+    with open(model_file_path, 'wb') as file:
+        pickle.dump(clf, file)
+
     # Calculate the accuracy of the classifier
     acc = accuracy_score(y_test, y_pred)
     _util.log('Accuracy: {}'.format(acc))
+
+    conf_mat = confusion_matrix(y_test, y_pred, normalize='true')
+    print(conf_mat)
+
+    fig = plt.figure(figsize=(50,20))
+    sns.heatmap(conf_mat, annot=True)
+    figure_name = "svm_confusion_matrix.png"
+    figure_path = os.path.join(_conf.out_dir, figure_name)
+    _util.log("![df_correlation]({figure_path})".format(figure_path=figure_path))
+    fig.savefig(figure_path)
+
 
 
 if __name__ == "__main__":
