@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 -W ignore training.py
+python3 -W ignore training_dl.py

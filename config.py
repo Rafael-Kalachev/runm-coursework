@@ -1,7 +1,7 @@
 import os
 database_file = "diabetes-dataset.xlsx"
 train_test_split_percent=0.3
-run_name="test_001"
+run_name="test_003"
 
 
 
