@@ -13,7 +13,7 @@ run: build
 	docker run -v $(PWD):/usr/src/app rkalachev/runm_coursework:$(VERSION)
 
 
-doc: svm.pdf 
+doc: coursework.pdf 
 
 
 %.pdf: %.md
