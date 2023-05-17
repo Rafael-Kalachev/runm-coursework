@@ -211,12 +211,16 @@ SVM е ефективен алгоритъм за класификация, ко
 # Библиография 
 
 \[1\] В. Младенов and С. Йорданова, Размито управление и невронни мрежи. Ту-София, 2016.
+
 \[2\] C. C. Aggarwal, Neural Networks and Deep Learning A Textbook. Cham Springer International Publishing, 2018.
-\[3\] sklearn, “sklearn.svm.SVC¶.” https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
+
+\[3\] sklearn, "sklearn.svm.SVC" https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
+
 \[4\] Wikipedia, “Support vector machine.” https://en.wikipedia.org/wiki/Support_vector_machine
+
 \[5\] Wikipedia, “Deep Learning.” https://en.wikipedia.org/wiki/Deep_learning
 
 # АПЕНДИКС
 
-
-
+Всички проектни файлове могат да бъдат намерени на [Github: https://github.com/Rafael-Kalachev/runm-coursework.git](https://github.com/Rafael-Kalachev/runm-coursework.git)
+Обучените модели както и допълнителна информация относно процеса са налични в прикаченият out.zip файл.
